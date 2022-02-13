@@ -1,11 +1,10 @@
 def writeFile(name):
-    print("Type 1 if you want to create a new file.")
-    print("Type 2 if you want to expand the file.")
+    print("Type 1 if you want to create a new file.\n"+ "Type 2 if you want to expand the file.")
     value = int(input())
     key = chr(7)
     if value == 1:
         with open(name, 'w') as file:
-            str = input("Enter the strings.\n" + "Press ENTER to start a new line.\n" + "Press CTRL + G to end the file.'\n")
+            str = input("Enter the strings.\n" + "Press ENTER to start a new line.\n" + "Press CTRL + G to end the file.\n")
             while str[0] != key:
                 file.write(str + '\n')
                 str = input()
