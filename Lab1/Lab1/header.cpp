@@ -1,8 +1,4 @@
 #include "header.h"
-#include <fstream>
-#include <string>
-#include <iostream>
-using namespace std;
 
 void writeFile(string name) {
 	int value;
@@ -37,7 +33,7 @@ void writeFile(string name) {
 		inFile.close();
     }
 }
-void outFile(const string name) {
+void outFile(string name) {
 	ifstream outFile(name);
 	if (!outFile.is_open()) {
 		cout << "Cant open the file!" << endl;
