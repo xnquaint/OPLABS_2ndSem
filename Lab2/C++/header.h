@@ -7,6 +7,7 @@
 #include "vector"
 #include "cstring"
 using namespace std;
+
 struct catalog{
     char name[70];
     char type[40];
