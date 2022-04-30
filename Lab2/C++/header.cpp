@@ -1,6 +1,3 @@
-//
-// Created by Stas on 21.04.2022.
-//
 
 #include "header.h"
 
