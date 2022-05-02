@@ -17,4 +17,4 @@ void input_file(const char*);
 void output_file(const char*);
 void create_second_file(const char*, const char*);
 void edit_file(const char*);
-#endif //LAB2SUPFINAL_HEADER_H
+
