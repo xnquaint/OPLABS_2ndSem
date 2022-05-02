@@ -1,6 +1,4 @@
 
-#ifndef LAB2SUPFINAL_HEADER_H
-#define LAB2SUPFINAL_HEADER_H
 #include <iostream>
 #include <string>
 #include <fstream>
