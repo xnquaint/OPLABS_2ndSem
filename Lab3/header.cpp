@@ -57,7 +57,7 @@ bool isBelong(Flat flats, vector<double> point){
     double x = point[0];
     double y = point[1];
     double z = point[2];
-    return a*x + b*y + c*z +d == 0;
+    return a*x + b*y + c*z + d == 0;
 }
 
 
