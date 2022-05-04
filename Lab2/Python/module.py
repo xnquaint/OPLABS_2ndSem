@@ -13,6 +13,8 @@ def inputFile(name):
             file = open(name, "ab")
             break
     number = int(input("Enter number of products: "))
+    while number <= 0:
+        number = int(input("Enter number of products: "))
     for i in range(number):
         product["name"] = input("Name: ")
         product["type"] = input("Type: ")
@@ -50,7 +52,7 @@ def createSecondFile(first_name, second_name):
     first_file.seek(0)
     while first_file.tell() < filesize:
         product = pickle.load(first_file)
-        if product["name"] == requested_name and product["type"] == requested_type:
+        if product["name"] == requested_name and product["type"] == requested_type and product["amount"] > 0:
             pickle.dump(product, second_file)
     first_file.close()
     second_file.close()
