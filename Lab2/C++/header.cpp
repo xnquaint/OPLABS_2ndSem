@@ -1,4 +1,3 @@
-
 #include "header.h"
 
 void input_file(const char* name){
@@ -18,7 +17,10 @@ void input_file(const char* name){
         cout << "Cant open the file!";
         exit(0);
     }
-    cout << "Enter number of products: "; cin >> number;
+    do {
+        cout << "Enter number of products: ";
+        cin >> number;
+    }while(number <= 0);
     for (int i = 0; i < number; ++i) {
         cout << "Enter name of product: "; cin >> product.name;
         cout << "Enter type of product: "; cin >> product.type;
@@ -53,7 +55,7 @@ void create_second_file(const char*first_name, const char* second_name){
     cout << "Enter the type of " << new_name << " you'd like to add to new file: "; cin >> kind;
 
     while(first_file.read((char*)&product, sizeof(catalog))){
-        if(strcmp(product.name, new_name) == 0 && strcmp(product.type, kind) == 0){
+        if(strcmp(product.name, new_name) == 0 && strcmp(product.type, kind) == 0 && product.amount > 0){
             second_file.write((char*)&product, sizeof(catalog));
         }
     }

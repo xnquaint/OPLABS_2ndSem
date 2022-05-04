@@ -10,7 +10,7 @@ int main() {
     cout << "Second file: " << endl;
     output_file(second);
     edit_file(second);
-    cout << "Edited file: " << endl;
+    cout << "\nEdited file: " << endl;
     output_file(second);
     return 0;
 }
