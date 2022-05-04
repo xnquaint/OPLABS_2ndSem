@@ -60,7 +60,7 @@ void define_flats(const vector<Flat>& flats, vector<double> point){
         cout << "Point doesnt belong to any of the flats.";
     }
     else{
-        cout << "Flats that the point belongs to: " << endl;
+        cout << "Flats the point belongs to: " << endl;
         for (int i = 0; i < assigned_flats.size(); ++i) {
             a = assigned_flats[i].get_a();
             b = assigned_flats[i].get_b();
