@@ -6,7 +6,7 @@ void input_file(const char* name){
     int mode = 0;
     int number;
     do {
-        cout << "Select the mode: \n 1 - create new file. \n 2 - append file.\n";
+        cout << "Select the mode: \n1 - create new file. \n2 - append file.\n";
         cin >> mode;
     }while(mode != 1 && mode != 2);
     if (mode == 1)
