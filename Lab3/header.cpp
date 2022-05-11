@@ -29,14 +29,10 @@ vector <Flat> fill_flats() {
     for (int i = 0; i < amount; ++i) {
         cout << "\n";
         cout << "Flat number " << i + 1 << "." << endl;
-        cout << "Enter coefficient a: ";
-        cin >> a;
-        cout << "Enter coefficient b: ";
-        cin >> b;
-        cout << "Enter coefficient c: ";
-        cin >> c;
-        cout << "Enter coefficient d: ";
-        cin >> d;
+        cout << "Enter coefficient a: ";cin >> a;
+        cout << "Enter coefficient b: ";cin >> b;
+        cout << "Enter coefficient c: ";cin >> c;
+        cout << "Enter coefficient d: ";cin >> d;
         cout << "\n";
         cout << "Flat: " << a << "x + " << b << "y + " << c << "z + " << d << " = 0" << endl;
         Flat some_flat(a, b, c, d);
@@ -44,31 +40,16 @@ vector <Flat> fill_flats() {
     }
     return flats;
 }
-void define_flats(const vector<Flat>& flats, vector<double> point){
-    double a;
-    double b;
-    double c;
-    double d;
+vector<Flat> define_flats(const vector<Flat>& flats, vector<double> point){
     cout << "\n" << "Point: " << "(" << point[0] << ", " << point[1] << ", " << point[2] << ")" << endl;
-    vector<Flat> assigned_flats;
+    vector<Flat> appropriate_flats;
     for (int i = 0; i < flats.size(); ++i) {
         if(isBelong(flats[i], point)) {
-            assigned_flats.push_back(flats[i]);
+            appropriate_flats.push_back(flats[i]);
         }
     }
-    if(assigned_flats.empty()){
-        cout << "Point doesnt belong to any of the flats.";
-    }
-    else{
-        cout << "Flats the point belongs to: " << endl;
-        for (int i = 0; i < assigned_flats.size(); ++i) {
-            a = assigned_flats[i].get_a();
-            b = assigned_flats[i].get_b();
-            c = assigned_flats[i].get_c();
-            d = assigned_flats[i].get_d();
-            cout << a << "x + " << b << "y + " << c << "z + " << d << " = 0" << endl;
-        }
-    }
+    return appropriate_flats;
+
 }
 
 bool isBelong(Flat flats, vector<double> point){
@@ -80,6 +61,26 @@ bool isBelong(Flat flats, vector<double> point){
     double y = point[1];
     double z = point[2];
     return a*x + b*y + c*z + d == 0;
+}
+
+void show_right_flats(vector<Flat> appropriate_flats) {
+    if(appropriate_flats.empty()){
+        cout << "Point doesnt belong to any of the flats.";
+    }
+    else{
+        double a;
+        double b;
+        double c;
+        double d;
+        cout << "Flats the point belongs to: " << endl;
+        for (int i = 0; i < appropriate_flats.size(); ++i) {
+            a = appropriate_flats[i].get_a();
+            b = appropriate_flats[i].get_b();
+            c = appropriate_flats[i].get_c();
+            d = appropriate_flats[i].get_d();
+            cout << a << "x + " << b << "y + " << c << "z + " << d << " = 0" << endl;
+        }
+    }
 }
 
 
