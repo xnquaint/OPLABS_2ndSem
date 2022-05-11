@@ -1,6 +1,7 @@
 
 #include "Flat.h"
 
+
 double Flat::get_a() const {
     return a_coefficient;
 }
@@ -16,4 +17,6 @@ double Flat::get_c() const {
 double Flat::get_d() const {
     return d_coefficient;
 }
+
+
 
