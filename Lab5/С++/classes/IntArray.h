@@ -4,7 +4,6 @@
 #define LAB5VER2_INTARRAY_H
 #include "TArray.h"
 #include "../header.h"
-#include "random"
 
 class IntArray: public TArray {
 private:
