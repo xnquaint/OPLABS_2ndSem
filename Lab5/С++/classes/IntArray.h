@@ -4,6 +4,7 @@
 #define LAB5VER2_INTARRAY_H
 #include "TArray.h"
 #include "../header.h"
+using namespace std;
 
 class IntArray: public TArray {
 private:
@@ -45,9 +46,9 @@ public:
     }
     void show_array() override{
         for (int i = 0; i < m_length; ++i) {
-            std::cout << array[i] << " ";
+            cout << array[i] << " ";
         }
-        std::cout << std::endl;
+        cout << endl;
     }
     ~IntArray() override{delete[] array;}
 };

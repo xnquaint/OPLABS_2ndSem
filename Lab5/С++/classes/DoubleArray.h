@@ -3,6 +3,8 @@
 #ifndef LAB5VER2_DOUBLEARRAY_H
 #define LAB5VER2_DOUBLEARRAY_H
 #include "TArray.h"
+#include "../header.h"
+using namespace std;
 
 class DoubleArray: public TArray {
 private:
@@ -42,9 +44,9 @@ public:
     }
     void show_array() override{
         for (int i = 0; i < m_length; ++i) {
-            std::cout << array[i] << " ";
+            cout << array[i] << " ";
         }
-        std::cout << std::endl;
+        cout << endl;
     }
     ~DoubleArray() override{delete[] array;}
 };
