@@ -33,7 +33,7 @@ def main():
     float_arrays = []
     m = 0
     while m <= 0:
-        m = int(input("Enter m: "))
+        m = int(input("Enter the number of arrays to be created: "))
     for i in range(m):
         int_arrays.append(IntArray(5))
         float_arrays.append(FloatArray(5))
