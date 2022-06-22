@@ -24,7 +24,7 @@ int main() {
     show_arrays(int_arrays, m);
     show_arrays(double_arrays, m);
     average = find_average(int_arrays, double_arrays, m, index, type);
-    cout << endl << "The largest average: " << average;
+    cout << endl << "Max average: " << average;
     show_average_array(int_arrays, double_arrays, index, type);
     return 0;
 }

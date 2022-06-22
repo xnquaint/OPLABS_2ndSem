@@ -8,11 +8,11 @@ using namespace std;
 
 class IntArray: public TArray {
 private:
-    int m_length;
+
     int* array;
 public:
-    IntArray(): m_length(0), array(nullptr) {}
-    explicit IntArray(int length): m_length(length){
+    IntArray(): TArray(0), array(nullptr) {}
+    explicit IntArray(int length): TArray(length){
         if(length > 0){
             array = new int [m_length];
         }

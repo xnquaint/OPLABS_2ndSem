@@ -4,6 +4,9 @@
 
 
 class TArray {
+protected:
+    int m_length;
+    TArray(int length) : m_length(length){};
 public:
     virtual void fill_array() = 0;
     virtual void increase(int) = 0;

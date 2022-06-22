@@ -8,11 +8,10 @@ using namespace std;
 
 class DoubleArray: public TArray {
 private:
-    int m_length;
     double* array;
 public:
-    DoubleArray(): m_length(0),array(nullptr) {}
-    explicit DoubleArray(int length): m_length(length){
+    DoubleArray(): TArray(0),array(nullptr) {}
+    explicit DoubleArray(int length): TArray(length){
         if(length > 0){
             array = new double [m_length];
         }
